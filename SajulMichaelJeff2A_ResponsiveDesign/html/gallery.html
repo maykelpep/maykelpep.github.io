@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <title>Wallapapers</title>
+</head>
+<body>
+    <div class="bounty-container">
+        <a href="../index.html">&LeftArrow; Go back</a>
+        <h1>Wallpapers</h1>
+        <div class="line"></div>
+        <div class="image-container">
+            <div class="image"><img src="../img/img1.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img2.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img3.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img4.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img5.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img6.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img7.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img8.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img9.jpeg" alt=""></div>
+            <div class="image"><img src="../img/img10.jpeg" alt=""></div>
+        </div>
 
+        <div class="popup">
+            <span>&times;</span>
+            <img src="../img/img1.jpeg" alt="">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Gege Akutami - Jujutsu Kaisen. <br>All rights reserved.</p>
+      </footer>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.popup').style.display = 'block';
+                document.querySelector('.popup img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup span').onclick = () =>{
+            document.querySelector('.popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
